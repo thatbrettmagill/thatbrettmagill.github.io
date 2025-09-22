@@ -1,0 +1,6 @@
+site_name: "Brett Magill"
+site_url: https://brettmagill.github.io
+nav:
+  - Home: index.md
+theme:
+  name: material
