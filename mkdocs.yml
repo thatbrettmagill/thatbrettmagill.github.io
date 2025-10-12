@@ -32,3 +32,6 @@ extra:
       link: https://instagram.com/dreadlymaw
     - icon: fontawesome/brands/linkedin
       link: https://linkedin.com/in/brettmagill
+
+markdown_extensions:
+  - footnotes
