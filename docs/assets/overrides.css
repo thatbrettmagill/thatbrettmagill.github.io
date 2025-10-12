@@ -6,16 +6,29 @@
 /* --- Header: flat, minimal, no logo icon --- */
 .md-header { box-shadow: none; }
 .md-header__button.md-logo { display: none; }      /* hides the little book icon */
-.md-header__title { font-weight: 700; }
-
-/* Tighten header height a touch */
-.md-header__inner { min-height: 56px; }
+.md-header__title {
+  font-weight: 700;
+  margin: 0 auto;           /* centers the title between left & right areas */
+  text-align: center;
+}
+.md-header__inner { 
+  min-height: 56px;
+  max-width: 100%;
+  padding: 0 1rem;
+}
+.md-tabs__list {
+  display: flex;
+  justify-content: center;   /* center the tabs horizontally */
+}
+.md-tabs__link { 
+  padding: 0.6rem 0.8rem; 
+}
 
 /* --- Dark mode = true black --- */
 :root[data-md-color-scheme="slate"] {
   --md-default-bg-color: #000;
   --md-code-bg-color: #0a0a0a;
-  --md-default-fg-color: rgba(0,0,0,1);
+  --md-default-fg-color: rgba(255,255,255,.92);
 }
 
 /* --- Typography (closer to Sample) --- */
