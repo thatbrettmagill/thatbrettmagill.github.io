@@ -36,3 +36,10 @@ extra:
 markdown_extensions:
   - footnotes
   - admonition
+  markdown_extensions:
+  - footnotes
+  - admonition
+  - pymdownx.wikilinks:
+      base_url: ""
+      end_url: ".html"
+      html_class: wikilink"
