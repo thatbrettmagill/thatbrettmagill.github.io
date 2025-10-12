@@ -1,41 +1,39 @@
-/* 1) Hide Material's header bar completely */
-.md-header { display: none; }
+/* --- Layout: remove left sidebar, center content column --- */
+.md-sidebar--primary { display: none; }
+.md-main__inner { margin-left: 0; }
+.md-content { max-width: 780px; margin: 0 auto; }
 
-/* 2) Remove the top offset the header normally adds */
-.md-main { margin-top: 0; }
+/* --- Header: flat, minimal, no logo icon --- */
+.md-header { box-shadow: none; }
+.md-header__button.md-logo { display: none; }      /* hides the little book icon */
+.md-header__title { font-weight: 700; }
 
-/* Floating Search button (top-right) */
-#bm-search-btn {
-  position: fixed;
-  top: 14px;
-  right: 14px;
-  z-index: 1000;
-  width: 40px;
-  height: 40px;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,.12);
-  background: rgba(255,255,255,.06);
-  color: #fff;
-  display: grid;
-  place-items: center;
-  cursor: pointer;
-  backdrop-filter: blur(6px);
+/* Tighten header height a touch */
+.md-header__inner { min-height: 56px; }
+
+/* --- Dark mode = true black --- */
+:root[data-md-color-scheme="slate"] {
+  --md-default-bg-color: #000;
+  --md-code-bg-color: #0a0a0a;
+  --md-default-fg-color: rgba(255,255,255,.92);
 }
+
+/* --- Typography (closer to the sample) --- */
+.md-typeset h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.01em; }
+.md-typeset h2 { font-size: 1.3rem; margin-top: 2.0rem; }
+.md-typeset p  { line-height: 1.7; }
+
+/* --- Post list styling for the Home feed --- */
+.post-list { list-style: none; padding: 0; margin: 0; }
+.post-list li { margin: 1.1rem 0 1.6rem; }
+.post-title { font-weight: 700; font-size: 1.05rem; }
+.post-meta  { opacity: .7; font-size: .9rem; margin-top: .2rem; }
+
 
 :root[data-md-color-scheme="default"] #bm-search-btn {
   background: rgba(0,0,0,.06);
   color: #111;
   border-color: rgba(0,0,0,.12);
 }
-
-#bm-search-btn:hover { opacity: .9; }
-
-/* Night mode = true black */
-:root[data-md-color-scheme="slate"] {
-  --md-default-bg-color: #000000;
-  --md-code-bg-color: #0a0a0a;
-  --md-default-fg-color: rgba(255,255,255,.92);
-}
-
 /* Remove any header shadow (even though header is hidden) */
 .md-header { box-shadow: none; }
