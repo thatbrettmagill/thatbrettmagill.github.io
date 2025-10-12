@@ -15,27 +15,44 @@
 :root[data-md-color-scheme="slate"] {
   --md-default-bg-color: #000;
   --md-code-bg-color: #0a0a0a;
-  --md-default-fg-color: rgba(255,255,255,.92);
+  --md-default-fg-color: rgba(0,0,0,1);
 }
 
-/* --- Typography (closer to the sample) --- */
-.md-typeset h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.01em; }
-.md-typeset h2 { font-size: 1.3rem; margin-top: 2.0rem; }
-.md-typeset p  { line-height: 1.7; }
+/* --- Typography (closer to Sample) --- */
+.md-typeset h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+.md-typeset h2 {
+  font-size: 1.3rem;
+  margin-top: 2rem;
+}
+.md-typeset p {
+  line-height: 1.7;
+  font-size: 1rem;
+}
 
 /* --- Post list styling for the Home feed --- */
-.post-list { list-style: none; padding: 0; margin: 0; }
-.post-list li { margin: 1.1rem 0 1.6rem; }
-.post-title { font-weight: 700; font-size: 1.05rem; }
-.post-meta  { opacity: .7; font-size: .9rem; margin-top: .2rem; }
-
-
-:root[data-md-color-scheme="default"] #bm-search-btn {
-  background: rgba(0,0,0,.06);
-  color: #111;
-  border-color: rgba(0,0,0,.12);
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
-/* Remove any header shadow (even though header is hidden) */
-.md-header { box-shadow: none; }
-.md-sidebar--primary { display: none; }
-.md-main__inner { margin-left: 0; }
+.post-list li {
+  margin: 1.1rem 0 1.6rem;
+}
+.post-title {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+.post-meta {
+  opacity: 0.7;
+  font-size: 0.9rem;
+  margin-top: 0.2rem;
+}
+
+/* --- Optional: tidy up spacing below header --- */
+.md-main {
+  padding-top: 1rem;
+}
