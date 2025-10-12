@@ -18,8 +18,7 @@ theme:
         icon: material/weather-sunny
         name: Light mode
   features:
-    - navigation.tabs          # <-- this makes the top-level nav show in the header
-    - navigation.tabs.sticky   # keeps tabs visible on scroll (optional)
+    - navigation.top        # show menu in the header, same line as title
     - navigation.instant
     - content.code.copy
 
