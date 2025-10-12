@@ -45,3 +45,6 @@ extra:
 markdown_extensions:
   - footnotes
   - admonition
+
+extra_css:
+  - assets/overrides.css
