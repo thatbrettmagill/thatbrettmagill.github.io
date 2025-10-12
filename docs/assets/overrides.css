@@ -1,0 +1,11 @@
+/* Make dark mode (slate) pure black and reduce chrome */
+:root[data-md-color-scheme="slate"] {
+  --md-default-bg-color: #000000;        /* page background */
+  --md-code-bg-color: #0a0a0a;           /* code blocks */
+  --md-default-fg-color: rgba(255,255,255,.92);
+}
+
+/* Clean up the header (no drop shadow) */
+.md-header {
+  box-shadow: none;
+}
