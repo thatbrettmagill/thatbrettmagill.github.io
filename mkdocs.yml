@@ -14,15 +14,24 @@ theme:
         icon: material/weather-sunny
         name: Light mode
   features:
-    - navigation.top        # header nav instead of left sidebar
-    - navigation.instant    # snappier page loads
-    - content.code.copy     # copy button on code blocks
+    - navigation.top
+    - navigation.instant
+    - content.code.copy
 
 nav:
   - Home: index.md
   - Projects: projects.md
   - Writing: writing.md
   - About: about.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/youtube
+      link: https://youtube.com/hyacsho
+    - icon: fontawesome/brands/instagram
+      link: https://instagram.com/dreadlymaw
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/brettmagill
 
 markdown_extensions:
   - footnotes
