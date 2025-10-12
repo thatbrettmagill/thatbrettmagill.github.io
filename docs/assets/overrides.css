@@ -12,9 +12,9 @@
   text-align: center;
 }
 .md-header__inner { 
-  min-height: 56px;
+  min-height: 100px;
   max-width: 100%;
-  padding: 0 1rem;
+  padding: 1rem;
 }
 .md-tabs__list {
   display: flex;
