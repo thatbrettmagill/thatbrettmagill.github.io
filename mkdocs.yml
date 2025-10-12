@@ -36,4 +36,3 @@ extra:
 markdown_extensions:
   - footnotes
   - admonition
-  - pymdownx.wikilinks
