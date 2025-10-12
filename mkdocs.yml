@@ -6,19 +6,19 @@ theme:
   name: material
   palette:
     - scheme: default
-      primary: deep purple
-      accent: purple
+      primary: black        # light mode header
+      accent: orange
       toggle:
         icon: material/weather-night
         name: Dark mode
     - scheme: slate
-      primary: deep purple
-      accent: purple
+      primary: black        # dark mode header
+      accent: orange
       toggle:
         icon: material/weather-sunny
         name: Light mode
   features:
-    - navigation.top
+    - navigation.top        # menu in the header
     - navigation.instant
     - content.code.copy
 
