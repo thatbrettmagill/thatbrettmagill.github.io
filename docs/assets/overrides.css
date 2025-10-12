@@ -29,3 +29,13 @@
 }
 
 #bm-search-btn:hover { opacity: .9; }
+
+/* Night mode = true black */
+:root[data-md-color-scheme="slate"] {
+  --md-default-bg-color: #000000;
+  --md-code-bg-color: #0a0a0a;
+  --md-default-fg-color: rgba(255,255,255,.92);
+}
+
+/* Remove any header shadow (even though header is hidden) */
+.md-header { box-shadow: none; }
