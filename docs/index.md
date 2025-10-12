@@ -1,7 +1,16 @@
+---
+hide:
+  - toc
+---
+
 # Brett Magill
 
 Hi, I’m Brett — a digital strategist, creator, and retro game enjoyer.  
 This site is my little archive for projects, writing, and experiments.
+
+**Start here:** [Projects](projects.md) · [Writing](writing.md) · [About](about.md)
+
+---
 
 ### 🧠 Work
 - Key Account Manager at TIDAL Digital (Dubai)
