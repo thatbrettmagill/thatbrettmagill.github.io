@@ -6,19 +6,20 @@ theme:
   name: material
   palette:
     - scheme: default
-      primary: black        # light mode header
+      primary: black
       accent: orange
       toggle:
         icon: material/weather-night
         name: Dark mode
     - scheme: slate
-      primary: black        # dark mode header
+      primary: black
       accent: orange
       toggle:
         icon: material/weather-sunny
         name: Light mode
   features:
-    - navigation.top        # menu in the header
+    - navigation.tabs          # <-- this makes the top-level nav show in the header
+    - navigation.tabs.sticky   # keeps tabs visible on scroll (optional)
     - navigation.instant
     - content.code.copy
 
