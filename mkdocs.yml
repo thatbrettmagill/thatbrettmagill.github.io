@@ -1,0 +1,9 @@
+site_name: Brett Magill
+site_description: Personal site & notes
+site_url: https://thatbrettmagill.github.io
+
+theme:
+  name: material
+
+nav:
+  - Home: index.md
