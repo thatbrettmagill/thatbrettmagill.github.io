@@ -37,3 +37,5 @@
 }
 /* Remove any header shadow (even though header is hidden) */
 .md-header { box-shadow: none; }
+.md-sidebar--primary { display: none; }
+.md-main__inner { margin-left: 0; }
