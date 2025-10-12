@@ -37,6 +37,9 @@ extra:
       link: https://instagram.com/dreadlymaw
     - icon: fontawesome/brands/linkedin
       link: https://linkedin.com/in/brettmagill
+  font:
+      text: Inter
+      code: JetBrains Mono
   copyright: "© 2025 Brett Magill"
 
 markdown_extensions:
