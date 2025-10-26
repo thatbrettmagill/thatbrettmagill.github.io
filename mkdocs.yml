@@ -18,10 +18,9 @@ theme:
         icon: material/weather-sunny
         name: Light mode
   features:
-    - navigation.top        # show menu in the header, same line as title
+    - navigation.top
     - navigation.instant
     - content.code.copy
-
 nav:
   - Home: index.md
   - Projects: projects.md
