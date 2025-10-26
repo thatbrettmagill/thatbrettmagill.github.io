@@ -1,82 +1,54 @@
-/* --- Custom Dark/Light Colour Overrides --- */
-
+/* Applies to both light (default) and dark (slate) schemes */
 :root {
-  --md-primary-fg-color: #282624;           /* primary (text/buttons) */
-  --md-accent-fg-color: #ff9800;            /* accent/orange */
-  --md-default-bg-color: #282624;           /* background */
-  --md-default-fg-color: #e0e0e0;           /* general text */
+  /* Brand neutrals */
+  --brand-bg: #282624;            /* main page background */
+  --brand-text: #e8e6e3;          /* primary text */
+  --brand-text-2: #c9c4bd;        /* secondary text */
+  --brand-accent: #ff9800;        /* keep for now */
+  --brand-border: #3c3835;
+
+  /* Code */
+  --brand-code-bg: #1f1d1b;
+  --brand-code-fg: #f2f0ed;
+
+  /* Map to Material variables */
+  --md-default-bg-color: var(--brand-bg);
+  --md-default-fg-color: var(--brand-text);
+  --md-default-fg-color--light: var(--brand-text-2);
+  --md-border-color: var(--brand-border);
+
+  --md-primary-bg-color: var(--brand-bg);   /* background used in header/tabs */
+  --md-primary-fg-color: var(--brand-text); /* text/icons on primary surfaces */
+  --md-accent-fg-color: var(--brand-accent);
+
+  --md-typeset-color: var(--brand-text);
+  --md-typeset-a-color: #ffb347;            /* warm link */
+  --md-code-bg-color: var(--brand-code-bg);
+  --md-code-fg-color: var(--brand-code-fg);
 }
 
+/* Dark scheme hook (Material sets [data-md-color-scheme="slate"]) */
 [data-md-color-scheme="slate"] {
-  --md-primary-fg-color: #282624;
-  --md-accent-fg-color: #ff9800;
-  --md-default-bg-color: #282624;
-  --md-default-fg-color: #e0e0e0;
+  --md-default-bg-color: var(--brand-bg);
+  --md-default-fg-color: var(--brand-text);
+  --md-primary-bg-color: var(--brand-bg);
+  --md-primary-fg-color: var(--brand-text);
+  --md-accent-fg-color: var(--brand-accent);
+  --md-typeset-a-color: #ffd08a;
 }
 
-/* --- Layout: remove left sidebar, center content column --- */
+/* --- Your layout/typography tweaks can stay --- */
 .md-sidebar--primary { display: none; }
 .md-main__inner { margin-left: 0; }
 .md-content { max-width: 780px; margin: 0 auto; }
 
-/* --- Header: flat, minimal, no logo icon --- */
 .md-header { box-shadow: none; }
-.md-header__button.md-logo { display: none; }      /* hides the little book icon */
-.md-header__title {
-  font-weight: 700;
-  margin: 0 auto;           /* centers the title between left & right areas */
-  text-align: center;
-}
-.md-header__inner {
-  min-height: 100px;
-  max-width: 9000px;   /* keeps header content from stretching edge-to-edge */
-  margin: 0 auto;
-  padding: 0 16px;
-  gap: 16px;
-}
+.md-header__button.md-logo { display: none; }
+.md-header__title { font-weight: 700; margin: 0 auto; text-align: center; }
+.md-header__inner { min-height: 100px; max-width: 9000px; margin: 0 auto; padding: 0 16px; gap: 16px; }
 
-/* --- Dark mode = true black --- */
-:root[data-md-color-scheme="slate"] {
-  --md-default-bg-color: #000;
-  --md-code-bg-color: #0a0a0a;
-  --md-default-fg-color: rgba(40,38,36,1);
-}
+.md-typeset h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.01em; }
+.md-typeset h2 { font-size: 1.3rem; margin-top: 2rem; }
+.md-typeset p  { line-height: 1.7; font-size: 1rem; }
 
-/* --- Typography (closer to Sample) --- */
-.md-typeset h1 {
-  font-size: 2.2rem;
-  font-weight: 800;
-  letter-spacing: -0.01em;
-}
-.md-typeset h2 {
-  font-size: 1.3rem;
-  margin-top: 2rem;
-}
-.md-typeset p {
-  line-height: 1.7;
-  font-size: 1rem;
-}
-
-/* --- Post list styling for the Home feed --- */
-.post-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.post-list li {
-  margin: 1.1rem 0 1.6rem;
-}
-.post-title {
-  font-weight: 700;
-  font-size: 1.05rem;
-}
-.post-meta {
-  opacity: 0.7;
-  font-size: 0.9rem;
-  margin-top: 0.2rem;
-}
-
-/* --- Optional: tidy up spacing below header --- */
-.md-main {
-  padding-top: 5rem;
-}
+.md-main { padding-top: 5rem; }
