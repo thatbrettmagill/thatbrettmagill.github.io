@@ -77,26 +77,40 @@
   border-bottom: 1px solid rgba(255,241,218,0.1);
 }
 
-/* ---------- Site title (“Brett Magill”) ---------- */
-.md-header__title .md-header__topic:first-child {
-  display: inline !important;         /* show the main site title */
-  color: var(--title-base) !important;
+/* ---------- Site title (“Brett Magill”) — force visible on desktop ---------- */
+.md-header__title[data-md-component="header-title"] {
+  display: block !important;     /* Material may hide on wide screens */
+  flex: 0 0 auto;
+  margin: 0;
+  text-align: left;
   font-weight: 700;
-  text-decoration: none;
-  opacity: 1 !important;
-  margin-right: 1rem;                /* space before the tabs */
+  white-space: nowrap;
+  visibility: visible !important; /* extra guard */
 }
 
-/* hide the page-specific label that appears after the title */
-.md-header__title .md-header__topic + .md-header__topic {
+/* Show the main site title (first topic) */
+.md-header__title[data-md-component="header-title"]
+  .md-header__topic:first-child {
+  display: inline !important;
+  color: var(--title-base) !important;
+  opacity: 1 !important;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* Hide the duplicate page label that follows the site title */
+.md-header__title[data-md-component="header-title"]
+  .md-header__topic:not(:first-child) {
   display: none !important;
 }
 
-.md-header__title a {
+/* Title link colours */
+.md-header__title[data-md-component="header-title"] a {
   color: var(--title-base) !important;
   text-decoration: none;
+  opacity: 1 !important;
 }
-.md-header__title a:hover {
+.md-header__title[data-md-component="header-title"] a:hover {
   color: var(--tabs-hover) !important;
 }
 
