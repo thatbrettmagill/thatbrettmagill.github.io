@@ -92,3 +92,33 @@
   text-shadow: 0 0 6px rgba(255, 152, 0, 0.3);
 }
 
+/* ---------- Top Navigation Tabs Colour Customisation ---------- */
+
+/* Base colour for menu links */
+.md-tabs__link {
+  color: #fff1da !important;  /* off-white ember */
+  font-weight: 500;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover and focus state */
+.md-tabs__link:hover,
+.md-tabs__link:focus {
+  color: #ffb347 !important;  /* warm orange hover */
+  text-decoration: none;
+}
+
+/* Active page tab */
+.md-tabs__link--active {
+  color: #ffd580 !important;  /* slightly brighter amber */
+  border-bottom: 2px solid #ffb347;  /* subtle underline indicator */
+  background: transparent;
+}
+
+/* Optional: for accessibility on dark headers */
+.md-header,
+.md-tabs {
+  background-color: var(--brand-bg, #282624);
+  border-bottom: 1px solid rgba(255, 241, 218, 0.1);
+}
+
