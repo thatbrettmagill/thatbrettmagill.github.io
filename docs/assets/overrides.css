@@ -92,8 +92,6 @@
   text-shadow: 0 0 6px rgba(255, 152, 0, 0.3);
 }
 
-/* ---------- Top Navigation Tabs Colour Customisation ---------- */
-
 /* Base colour for menu links */
 .md-tabs__link {
   color: #fff1da !important;  /* off-white ember */
@@ -120,5 +118,35 @@
 .md-tabs {
   background-color: var(--brand-bg, #282624);
   border-bottom: 1px solid rgba(255, 241, 218, 0.1);
+}
+
+/* ========= Top menu colours (force over Material defaults) ========= */
+:root {
+  --tabs-color: #fff1da;    /* Off-white Ember */
+  --tabs-hover: #ffb347;    /* warm hover */
+  --tabs-active: #ffd580;   /* active tab text */
+}
+
+/* Base state */
+.md-header .md-tabs__link {
+  color: var(--tabs-color) !important;
+  opacity: 1 !important;              /* Material sets .7 – override it */
+  text-decoration: none;
+  transition: color .2s ease;
+}
+
+/* Hover/Focus */
+.md-header .md-tabs__link:hover,
+.md-header .md-tabs__link:focus {
+  color: var(--tabs-hover) !important;
+  opacity: 1 !important;
+}
+
+/* Active tab */
+.md-header .md-tabs__link--active {
+  color: var(--tabs-active) !important;
+  opacity: 1 !important;
+  background: transparent !important;
+  border-bottom: 2px solid var(--tabs-hover);
 }
 
