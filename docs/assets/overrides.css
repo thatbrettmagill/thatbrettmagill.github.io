@@ -52,3 +52,26 @@
 .md-typeset p  { line-height: 1.7; font-size: 1rem; }
 
 .md-main { padding-top: 5rem; }
+
+/* ---------- Hyperlink Styling ---------- */
+/* Default link colour (orange accent) */
+.md-typeset a,
+.md-typeset a:visited {
+  color: #ff9800;
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in oklab, #ff9800 50%, transparent);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover colour — bright amber/gold for contrast */
+.md-typeset a:hover,
+.md-typeset a:focus {
+  color: #ffd580; /* warm gold hover */
+  border-bottom-color: #ffd580;
+}
+
+/* Optional: subtle glow effect for hover */
+.md-typeset a:hover {
+  text-shadow: 0 0 6px rgba(255, 152, 0, 0.3);
+}
+
