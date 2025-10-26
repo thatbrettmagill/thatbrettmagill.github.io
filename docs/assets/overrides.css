@@ -12,8 +12,8 @@
   text-align: center;
 }
 .md-header__inner {
-  min-height: 56px;
-  max-width: 1100px;   /* keeps header content from stretching edge-to-edge */
+  min-height: 100px;
+  max-width: 9000px;   /* keeps header content from stretching edge-to-edge */
   margin: 0 auto;
   padding: 0 16px;
   gap: 16px;
@@ -62,5 +62,5 @@
 
 /* --- Optional: tidy up spacing below header --- */
 .md-main {
-  padding-top: 1rem;
+  padding-top: 5rem;
 }
