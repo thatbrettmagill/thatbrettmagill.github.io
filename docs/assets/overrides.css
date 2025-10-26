@@ -137,8 +137,3 @@
   text-decoration: none;
   transition: color .2s ease;
 }
-
-/* Hide the auto-inserted current page title inside the header to prevent overlap */
-.md-header .md-header__title .md-header__topic {
-  display: none !important;
-}
