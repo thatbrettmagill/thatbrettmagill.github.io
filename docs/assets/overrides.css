@@ -138,11 +138,7 @@
   transition: color .2s ease;
 }
 
-/* Hover/focus state */
-.md-header .md-header__title:hover,
-.md-header .md-header__title a:hover,
-.md-header .md-header__title a:focus,
-.md-header .md-header__title:hover .md-header__topic,
-.md-header .md-header__title:hover .md-ellipsis {
-  color: var(--title-hover) !important;
+/* Hide the auto-inserted current page title inside the header to prevent overlap */
+.md-header .md-header__title .md-header__topic {
+  display: none !important;
 }
