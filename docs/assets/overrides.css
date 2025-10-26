@@ -127,11 +127,12 @@
   --tabs-active: #ffd580;   /* active tab text */
 }
 
-/* Base state */
-.md-header .md-tabs__link {
-  color: var(--tabs-color) !important;
-  opacity: 1 !important;              /* Material sets .7 – override it */
-  text-decoration: none;
+/* Base title in header */
+.md-header__title,
+.md-header__title .md-header__topic,
+.md-header__title a {
+  color: var(--title-base) !important;
+  opacity: 1 !important;                 /* Material dims by default */
   transition: color .2s ease;
 }
 
