@@ -18,8 +18,8 @@ theme:
         icon: material/weather-sunny
         name: Light mode
   features:
-    - navigation.top
     - navigation.instant
+    - navigation.top
     - navigation.tabs.sticky
     - content.code.copy
 nav:
