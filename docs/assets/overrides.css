@@ -1,3 +1,20 @@
+/* Make the top navigation (tabs) sit nicely next to the title */
+.md-tabs {
+  justify-content: flex-start;  /* keep links left, next to the title */
+  margin-left: 2rem;            /* space between title and links */
+  background: transparent;
+  border: 0;
+}
+
+.md-tabs__link {
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+}
+
+.md-tabs__link--active {
+  background: color-mix(in oklab, var(--brand-surface, #2f2c29) 80%, transparent);
+}
+
 /* Applies to both light (default) and dark (slate) schemes */
 :root {
   /* Brand neutrals */
@@ -44,8 +61,8 @@
 
 .md-header { box-shadow: none; }
 .md-header__button.md-logo { display: none; }
-.md-header__title { font-weight: 700; margin: 0 auto; text-align: center; }
-.md-header__inner { min-height: 100px; max-width: 9000px; margin: 0 auto; padding: 0 16px; gap: 16px; }
+.md-header__title { font-weight: 700; margin: 0; text-align: left; }
+.md-header__inner { min-height: 64px; max-width: 61rem; margin: 0 auto; padding: 0 1rem; gap: 0.75rem; }
 
 .md-typeset h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.01em; }
 .md-typeset h2 { font-size: 1.3rem; margin-top: 2rem; }
