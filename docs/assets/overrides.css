@@ -121,19 +121,27 @@
 }
 
 /* ===== Header title ("Brett Magill") colours ===== */
-:root{
+:root {
   --title-base:  #fff1da;  /* Off-white Ember (default) */
-  --title-hover: #ffb347;  /* Copper Glow on hover */
-  /* If you prefer Warm Gold instead, use: #ffd580 */
+  --title-hover: #ffb347;  /* Copper Glow on hover — optional */
 }
 
-/* Base state (cover all internal elements Material uses) */
-.md-header .md-header__title,
-.md-header .md-header__title a,
-.md-header .md-header__title .md-header__topic,
-.md-header .md-header__title .md-ellipsis {
+/* Base state (site title link) */
+.md-header__title a {
   color: var(--title-base) !important;
-  opacity: 1 !important;              /* Material applies a lower opacity */
+  opacity: 1 !important;               /* prevent Material dimming */
   text-decoration: none;
-  transition: color .2s ease;
+  font-weight: 700;
+  transition: none;                    /* no hover animation for a flat look */
+}
+
+/* Remove hover colour (keep it flat) */
+.md-header__title a:hover,
+.md-header__title a:focus {
+  color: var(--title-base) !important;
+}
+
+/* Ensure only one title displays — hide the duplicate page topic text */
+.md-header__title .md-header__topic {
+  display: none !important;
 }
