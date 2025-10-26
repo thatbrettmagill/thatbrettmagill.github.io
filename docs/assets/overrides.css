@@ -78,8 +78,27 @@
 }
 
 /* ---------- Site title (“Brett Magill”) ---------- */
-/* Flat colour, no hover change; hide duplicate page label to prevent overlap */
-.md-header__title .md-header__topic { display: none !important; }
+.md-header__title .md-header__topic:first-child {
+  display: inline !important;         /* show the main site title */
+  color: var(--title-base) !important;
+  font-weight: 700;
+  text-decoration: none;
+  opacity: 1 !important;
+  margin-right: 1rem;                /* space before the tabs */
+}
+
+/* hide the page-specific label that appears after the title */
+.md-header__title .md-header__topic + .md-header__topic {
+  display: none !important;
+}
+
+.md-header__title a {
+  color: var(--title-base) !important;
+  text-decoration: none;
+}
+.md-header__title a:hover {
+  color: var(--tabs-hover) !important;
+}
 
 .md-header__title a {
   color: var(--title-base) !important;
